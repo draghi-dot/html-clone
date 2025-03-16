@@ -1,0 +1,9 @@
+Cluster 14 (7 documents)
+========================================
+- ..\clones\tier1\babubasics.co.uk.html
+- ..\clones\tier1\babubasics.com.html
+- ..\clones\tier1\eonfibre.net.html
+- ..\clones\tier1\paddygower.com.html
+- ..\clones\tier1\scalingspecialists.com.html
+- ..\clones\tier1\stratalaser.com.html
+- ..\clones\tier1\thisisthefuckingnews.com.html

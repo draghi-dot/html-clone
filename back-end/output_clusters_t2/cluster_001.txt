@@ -1,0 +1,9 @@
+Cluster 1 (7 documents)
+========================================
+- ..\clones\tier2\acco-semi.com.html
+- ..\clones\tier2\bestcontentwritingservice.com.html
+- ..\clones\tier2\engineeredrss.com.html
+- ..\clones\tier2\fortunatextiles.es.html
+- ..\clones\tier2\mpgsx.com.mx.html
+- ..\clones\tier2\nykei.com.html
+- ..\clones\tier2\tiptopteak.com.html

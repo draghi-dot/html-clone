@@ -1,0 +1,5 @@
+Cluster 17 (3 documents)
+========================================
+- ..\clones\tier1\championdirect.store.html
+- ..\clones\tier1\golf-saint-cyprien.com.html
+- ..\clones\tier1\sodearif.com.html

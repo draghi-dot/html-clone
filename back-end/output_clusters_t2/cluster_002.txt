@@ -1,0 +1,8 @@
+Cluster 2 (6 documents)
+========================================
+- ..\clones\tier2\ads-sedlmair.online.html
+- ..\clones\tier2\hanshammer.de.html
+- ..\clones\tier2\hhammer.de.html
+- ..\clones\tier2\kroha.de.html
+- ..\clones\tier2\local-marketing-lab.com.html
+- ..\clones\tier2\techcom-gmbh.de.html

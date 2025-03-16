@@ -1,0 +1,7 @@
+Cluster 5 (5 documents)
+========================================
+- ..\clones\tier2\creplace.com.html
+- ..\clones\tier2\djdrinks.co.uk.html
+- ..\clones\tier2\healthfly.in.html
+- ..\clones\tier2\mariner-energy.com.html
+- ..\clones\tier2\starkwelt.com.html

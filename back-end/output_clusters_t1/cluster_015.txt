@@ -1,0 +1,18 @@
+Cluster 15 (16 documents)
+========================================
+- ..\clones\tier1\badlandsconcerts.com.html
+- ..\clones\tier1\badlandslightfest.com.html
+- ..\clones\tier1\columbiahouse.ca.html
+- ..\clones\tier1\concoursparcscanada.ca.html
+- ..\clones\tier1\couplesdash.com.html
+- ..\clones\tier1\datewithdice.com.html
+- ..\clones\tier1\dudecheck.com.html
+- ..\clones\tier1\fmdistilled.com.html
+- ..\clones\tier1\globewayimmigration.com.html
+- ..\clones\tier1\ilovestubbs.com.html
+- ..\clones\tier1\membranereactor.com.html
+- ..\clones\tier1\nobullheating.com.html
+- ..\clones\tier1\rootsbluesbarbecue.com.html
+- ..\clones\tier1\soultosolesoundspa.com.html
+- ..\clones\tier1\templarsnotary.com.html
+- ..\clones\tier1\wifipresspad.com.html
