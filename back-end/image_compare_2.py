@@ -213,6 +213,6 @@ def main(input_dir, output_dir):
     clusterer.close()
 
 if __name__ == "__main__":
-    INPUT_DIR = "clones/tier2"  # Folder with your HTML files
-    OUTPUT_DIR = "output_clusters_t2"  # Where to save cluster results
+    INPUT_DIR = "../back-end/clones/tier2"  # Folder with your HTML files
+    OUTPUT_DIR = "../back-end/output_clusters_t2"  # Where to save cluster results
     main(INPUT_DIR, OUTPUT_DIR)

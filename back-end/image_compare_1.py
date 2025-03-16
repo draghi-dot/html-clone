@@ -236,6 +236,6 @@ def main(input_dir, output_dir):
     clusterer.close()
 
 if __name__ == "__main__":
-    INPUT_DIR = "clones/tier1"  # Folder with your HTML files for Tier 1
-    OUTPUT_DIR = "output_clusters_t1"  # Updated output directory name to 'output_clusters_t1'
+    INPUT_DIR = "../back-end/clones/tier1"  # Folder with your HTML files for Tier 1
+    OUTPUT_DIR = "../back-end/output_clusters_t1"  # Updated output directory name to 'output_clusters_t1'
     main(INPUT_DIR, OUTPUT_DIR)
