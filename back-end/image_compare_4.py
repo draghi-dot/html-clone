@@ -3,6 +3,9 @@ import numpy as np
 from PIL import Image
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import WebDriverException, TimeoutException
 from sklearn.cluster import DBSCAN
 from sklearn.metrics.pairwise import cosine_similarity
 from tensorflow.keras.applications import VGG16
@@ -10,8 +13,6 @@ from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.vgg16 import preprocess_input
 from sentence_transformers import SentenceTransformer
 from collections import defaultdict
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
 import re
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
@@ -29,31 +30,47 @@ class VisualAnalyzer:
         self.driver = self._initialize_driver()
 
     def _get_browser_options(self):
-        """Setup Chrome options"""
         options = Options()
         options.add_argument('--headless')
         options.add_argument('--disable-gpu')
         options.add_argument('--window-size=1920,1080')
+        options.add_argument('--ignore-certificate-errors')  # Bypass SSL errors
+        options.add_argument('--allow-insecure-localhost')  # Allow insecure localhost
+        options.add_argument('--disable-web-security')  # Disable web security
+        options.add_argument('--disable-dev-shm-usage')  # Avoid /dev/shm issues
+        options.add_argument('--ignore-ssl-errors=yes')  # Ignore all SSL errors
+        options.add_argument('--disable-extensions')  # Disable extensions
+        options.add_argument('--no-sandbox')  # Disable sandbox for headless mode
         return options
 
     def _initialize_driver(self):
-        """Initialize the Chrome WebDriver"""
+        """Initialize the Chrome WebDriver with logging and timeout"""
         chrome_driver_path = r"C:\Users\draghi\Desktop\chromedriver-win64\chromedriver.exe"  # Update path if needed
-        options = self._get_browser_options()  # Now this is accessible
-        service = Service(chrome_driver_path)
-        return webdriver.Chrome(service=service, options=options)
+        options = self._get_browser_options()
+        service = Service(chrome_driver_path, log_path="chromedriver.log")  # Log to a file
+        driver = webdriver.Chrome(service=service, options=options)
+        
+        # Set page load timeout (e.g., 60 seconds)
+        driver.set_page_load_timeout(60)
+        return driver
 
-    def capture_screenshot(self, file_path, save_path):
-        """Capture a screenshot of the local HTML file"""
-        try:
-            # Directly open the file without 'file://'
-            print(f"Attempting to capture screenshot for {file_path}")  # Log the file path being used
-            self.driver.get(f"file:///{os.path.abspath(file_path)}")  # Correct file path format
-            self.driver.save_screenshot(save_path)
-            return Image.open(save_path)
-        except Exception as e:
-            print(f"Error capturing screenshot for {file_path}: {str(e)}")
-            return None
+    def capture_screenshot(self, file_path, save_path, max_retries=3):
+        for attempt in range(max_retries):
+            try:
+                print(f"Attempt {attempt + 1} for {file_path}")
+                self.driver.set_page_load_timeout(60)  # Set timeout to 60 seconds
+                self.driver.get(f"file:///{os.path.abspath(file_path)}")
+                self.driver.save_screenshot(save_path)
+                return Image.open(save_path)
+            except TimeoutException:
+                print(f"Timeout: {file_path} took too long to load (attempt {attempt + 1}).")
+            except WebDriverException as e:
+                print(f"WebDriverException for {file_path} (attempt {attempt + 1}): {str(e)}")
+            except Exception as e:
+                print(f"Error capturing screenshot for {file_path}: {str(e)}")
+                return None
+        print(f"Failed to capture screenshot for {file_path} after {max_retries} attempts.")
+        return None
 
     def extract_visual_features(self, img_path):
         """Extract visual features using VGG16"""
@@ -119,23 +136,31 @@ def get_text_embedding(text_str):
 class WebsiteClusterer:
     def __init__(self):
         self.visual_analyzer = VisualAnalyzer()
-        self.screenshot_dir = "website_screenshots"
+        self.screenshot_dir = "website_screenshots_t4"  # Updated directory name
         os.makedirs(self.screenshot_dir, exist_ok=True)
         
     def process_website(self, file_path):
-        """Process a website and extract features"""
+        """Process a website and extract features with WebDriver restart on crash"""
         try:
             data = process_file(file_path)
             
             # Capture and analyze screenshot
             screenshot_path = os.path.join(self.screenshot_dir, f"{os.path.basename(file_path)}.png")
-            self.visual_analyzer.capture_screenshot(file_path, screenshot_path)
+            screenshot = self.visual_analyzer.capture_screenshot(file_path, screenshot_path)
+            
+            if screenshot is None:
+                print(f"Skipping {file_path} due to screenshot capture failure.")
+                return None
+            
             data['visual_features'] = self.visual_analyzer.extract_visual_features(screenshot_path)
             data['text_embedding'] = get_text_embedding(data['text'])
             
             return data
         except Exception as e:
             print(f"Error processing {file_path}: {str(e)}")
+            print("Restarting WebDriver...")
+            self.visual_analyzer.close()
+            self.visual_analyzer = VisualAnalyzer()  # Restart WebDriver
             return None
 
     def calculate_similarity(self, doc1, doc2):
@@ -159,8 +184,6 @@ class WebsiteClusterer:
         features = np.array([d['visual_features'] for d in processed_data])
         
         # Using DBSCAN with adjusted eps and min_samples
-        # Lower eps to make DBSCAN more sensitive to similarities between websites
-        # Increase min_samples to allow smaller clusters
         clustering = DBSCAN(metric='cosine', eps=1-similarity_threshold, min_samples=1).fit(features)  # min_samples=1 to allow single points as their own cluster
         return clustering.labels_
 
@@ -213,6 +236,6 @@ def main(input_dir, output_dir):
     clusterer.close()
 
 if __name__ == "__main__":
-    INPUT_DIR = "clones/tier2"  # Folder with your HTML files
-    OUTPUT_DIR = "output_clusters_t2"  # Where to save cluster results
+    INPUT_DIR = "clones/tier4"  # Folder with your HTML files
+    OUTPUT_DIR = "output_clusters_t4"  # Updated output directory name
     main(INPUT_DIR, OUTPUT_DIR)

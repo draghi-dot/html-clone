@@ -1,0 +1,14 @@
+Cluster 1 (12 documents)
+========================================
+- ..\clones\tier4\1-win-cazinos-club.org.ru.html
+- ..\clones\tier4\1win-official-site-casinoz.org.ru.html
+- ..\clones\tier4\1win-sloty.pp.ru.html
+- ..\clones\tier4\1wincasinoz-vhod.org.ru.html
+- ..\clones\tier4\cazinos-official-1win.net.ru.html
+- ..\clones\tier4\cazinoz1-win.pp.ru.html
+- ..\clones\tier4\fontan-casino.pp.ru.html
+- ..\clones\tier4\fontan-mobile.net.ru.html
+- ..\clones\tier4\fontan-zercalo.net.ru.html
+- ..\clones\tier4\kasinos-1-win.net.ru.html
+- ..\clones\tier4\mirror-wulkan-russia.org.ru.html
+- ..\clones\tier4\vulcan-24kasinos.pp.ru.html

@@ -1,0 +1,22 @@
+Cluster 1 (20 documents)
+========================================
+- ..\clones\tier3\1stmortgages.london.html
+- ..\clones\tier3\adeptohomes.com.html
+- ..\clones\tier3\belledermaaesthetics.com.html
+- ..\clones\tier3\columbiacouncilofneighborhoods.com.html
+- ..\clones\tier3\deltadoula.com.html
+- ..\clones\tier3\eastbourne.online.html
+- ..\clones\tier3\fieldtech.info.html
+- ..\clones\tier3\flyerfunnelsuk.com.html
+- ..\clones\tier3\frankieswinebar.com.html
+- ..\clones\tier3\furniturehutuk.com.html
+- ..\clones\tier3\g3rcq.com.html
+- ..\clones\tier3\hycareakarui.com.html
+- ..\clones\tier3\lagustosavaldebebas.com.html
+- ..\clones\tier3\lipolondon.com.html
+- ..\clones\tier3\londonviptaxi.com.html
+- ..\clones\tier3\okcis.info.html
+- ..\clones\tier3\renautautomotive.com.html
+- ..\clones\tier3\renewconsultants.com.html
+- ..\clones\tier3\sophrologue-paris14.com.html
+- ..\clones\tier3\thefoxinnbroadwell.com.html

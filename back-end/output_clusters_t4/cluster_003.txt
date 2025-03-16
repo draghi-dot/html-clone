@@ -1,0 +1,9 @@
+Cluster 3 (7 documents)
+========================================
+- ..\clones\tier4\assuredrxservices.com.html
+- ..\clones\tier4\coronadynamics.com.html
+- ..\clones\tier4\ecoled.co.in.html
+- ..\clones\tier4\lbgenetics.com.html
+- ..\clones\tier4\morriskamlay.com.html
+- ..\clones\tier4\rmhaddock.com.html
+- ..\clones\tier4\your-pc-guru.com.html

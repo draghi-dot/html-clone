@@ -119,7 +119,7 @@ def get_text_embedding(text_str):
 class WebsiteClusterer:
     def __init__(self):
         self.visual_analyzer = VisualAnalyzer()
-        self.screenshot_dir = "website_screenshots"
+        self.screenshot_dir = "website_screenshots_t2"
         os.makedirs(self.screenshot_dir, exist_ok=True)
         
     def process_website(self, file_path):
@@ -213,6 +213,6 @@ def main(input_dir, output_dir):
     clusterer.close()
 
 if __name__ == "__main__":
-    INPUT_DIR = "clones/tier3"  # Folder with your HTML files
-    OUTPUT_DIR = "output_clusters_t3"  # Where to save cluster results
+    INPUT_DIR = "clones/tier2"  # Folder with your HTML files
+    OUTPUT_DIR = "output_clusters_t2"  # Where to save cluster results
     main(INPUT_DIR, OUTPUT_DIR)

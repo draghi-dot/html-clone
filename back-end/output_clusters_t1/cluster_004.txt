@@ -1,4 +1,22 @@
-Cluster 4 (2 documents)
+Cluster 4 (20 documents)
 ========================================
-- ..\clones\tier1\amcun3.online.html
-- ..\clones\tier1\amcun9.online.html
+- ..\clones\tier1\alphamaterialsinc.com.html
+- ..\clones\tier1\americanairless.com.html
+- ..\clones\tier1\angelvisiontravel.com.html
+- ..\clones\tier1\brakeditorial.com.html
+- ..\clones\tier1\citizensagainstsextrafficking.org.html
+- ..\clones\tier1\crazyadsclimber.com.html
+- ..\clones\tier1\doughansonconstruction.com.html
+- ..\clones\tier1\fidexor.com.html
+- ..\clones\tier1\grantiah.com.html
+- ..\clones\tier1\harotzu.com.html
+- ..\clones\tier1\jandptrucking.com.html
+- ..\clones\tier1\keepmybooks.pro.html
+- ..\clones\tier1\keepmybooks.services.html
+- ..\clones\tier1\moneyweedwives.com.html
+- ..\clones\tier1\moneyweedwives.show.html
+- ..\clones\tier1\nounsbverbn.com.html
+- ..\clones\tier1\ordfld.com.html
+- ..\clones\tier1\pvcgs.org.html
+- ..\clones\tier1\pyramidelectric.us.html
+- ..\clones\tier1\rovics.com.html

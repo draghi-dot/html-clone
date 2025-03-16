@@ -1,3 +1,4 @@
-Cluster 6 (1 documents)
+Cluster 6 (2 documents)
 ========================================
-- ..\clones\tier1\amt-avaluos.online.html
+- ..\clones\tier1\amordevoltarapido.com.br.html
+- ..\clones\tier1\atyourlevel.online.html

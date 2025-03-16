@@ -1,0 +1,13 @@
+Cluster 2 (11 documents)
+========================================
+- ..\clones\tier4\altnloyalty.com.html
+- ..\clones\tier4\ascendohio.com.html
+- ..\clones\tier4\lmeloyalty.com.html
+- ..\clones\tier4\nbesloyalty.com.html
+- ..\clones\tier4\novltyclub.com.html
+- ..\clones\tier4\shoalsslty.com.html
+- ..\clones\tier4\tlflhasit1.com.html
+- ..\clones\tier4\tryhrbyloyalty.com.html
+- ..\clones\tier4\visittlfl.com.html
+- ..\clones\tier4\wowlklnd.com.html
+- ..\clones\tier4\zenlfs.com.html
