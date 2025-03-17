@@ -1,10 +1,9 @@
-Cluster 2 (15 documents)
+Cluster 2 (14 documents)
 ========================================
 - ..\clones\tier3\afnanstore.shop.html
 - ..\clones\tier3\bersamaetawalin.site.html
 - ..\clones\tier3\cameliastore28.my.id.html
 - ..\clones\tier3\coade.icu.html
-- ..\clones\tier3\cosekarang.com.html
 - ..\clones\tier3\dhavinastore.com.html
 - ..\clones\tier3\elitemajesty.com.html
 - ..\clones\tier3\etawalinherbalmilk.site.html
